@@ -94,14 +94,14 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             PhotoBench: Beyond Visual Matching Towards Personalized Intent-Driven Photo Retrieval
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto"> 
-            This is the official website for PhotoBench.
-            Submit your evaluation file to see how your agent or model performs.
-            The results will be send to your email within 1 day.
-          </p>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              This is the official evaluation server for the PhotoBench benchmark.
+              <br />
+              Submit your model's prediction file to benchmark its performance. Results will be sent to the provided email address within 24 hours.
+            </p>
         </div>
 
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
+        <div className="bg-slate-50 p-8 rounded-md shadow-md">
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
@@ -149,14 +149,14 @@ export default function Home() {
                   onChange={handleFileChange}
                 />
               </div>
+              <a href="https://github.com/LaVieEnRose365/PhotoBench/" className="text-xs text-slate-500 mt-1">
+                Here for submission file format
+              </a>
             </div>
-            <a href="https://github.com/LaVieEnRose365/PhotoBench/" className="text-xs text-slate-500 mt-1">
-              Here for sample file format
-            </a>
 
             <button
               type="submit"
-              className="w-full bg-navy-blue text-white font-bold py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
+              className="w-full bg-blue-700 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-800 transition-colors"
             >
               Submit
             </button>
