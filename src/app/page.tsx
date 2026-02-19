@@ -24,12 +24,12 @@ export default function Home() {
   const onDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     const droppedFile = event.dataTransfer.files[0];
-    if (droppedFile && droppedFile.type === "application/json" && droppedFile.size <= 500 * 1024 * 1024) {
+    if (droppedFile && droppedFile.type === "application/json" && droppedFile.size <= 5 * 1024 * 1024) {
       setFile(droppedFile);
       setMessage("");
     } else {
       setFile(null);
-      setMessage("Please upload a .json file smaller than 500MB.");
+      setMessage("Please upload a .json file smaller than 5MB.");
     }
   }, []);
 
@@ -97,6 +97,7 @@ export default function Home() {
           <p className="text-lg text-slate-600 max-w-2xl mx-auto"> 
             This is the official website for PhotoBench.
             Submit your evaluation file to see how your agent or model performs.
+            The results will be send to your email within 1 day.
           </p>
         </div>
 
@@ -138,7 +139,7 @@ export default function Home() {
                       <span className="font-semibold">Click to upload</span> or drag and drop
                     </p>
                   )}
-                  <p className="text-xs text-slate-500 mt-1">JSON only, max 500MB</p>
+                  <p className="text-xs text-slate-500 mt-1">JSON only, max 5MB</p>
                 </div>
                 <input
                   type="file"
