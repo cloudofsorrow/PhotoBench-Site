@@ -18,7 +18,7 @@ export default function LeaderboardPage() {
               <a href="/leaderboard" className="text-navy-blue hover:underline">
                 Leaderboard
               </a>
-              <a href="#" className="text-navy-blue hover:underline">
+              <a href="https://arxiv.org/abs/2603.01493" className="text-navy-blue hover:underline">
                 Paper
               </a>
               <a
